@@ -1,6 +1,6 @@
 class Tile
 {
-  constructor(x, y, width, height, img, alpha)
+  constructor(x, y, width, height, img, alpha, game)
   {
     this.x = x;
     this.y = y;
@@ -9,6 +9,7 @@ class Tile
 
     this.img = img;
     this.alpha = alpha;
+    this.game = game;
   }
 
   get hitbox()
@@ -23,21 +24,22 @@ class Tile
 
   draw()
   {
+    const game = this.game;
+
     ctx.save();
-
-    ctx.globalAlpha = this.alpha;
+    ctx.globalAlpha = this.alpha * game.alpha;
     ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
-
     ctx.restore();
   }
 }
 
 class Block extends Tile
 {
-  constructor(x, y, width, alpha, id)
+  constructor(x, y, width, alpha, id, style, game)
   {
-    super(x, y, width, width, img.missing, alpha);
+    super(x, y, width, width, img.missing, alpha, game);
     this.id = id;
+    this.style = style;
     this.solid;
     this.harmful;
     this.getProperties();
@@ -49,8 +51,38 @@ class Block extends Tile
       return block.id === this.id;
     });
 
-    this.img = info.img;
+    this.img = info.img[this.style];
     this.solid = info.solid;
     this.harmful = info.harmful;
   }
+}
+
+class Spike extends Block
+{
+  constructor(x, y, width, alpha, id, style, game)
+  {
+    super(x, y, width, alpha, id, style, game);
+  }
+
+  /*
+  get hitbox()
+  {
+
+  }
+  */
+}
+
+class Lava extends Block
+{
+  constructor(x, y, width, alpha, id, style, game)
+  {
+    super(x, y, width, alpha, id, style, game);
+  }
+
+  /*
+  get hitbox()
+  {
+
+  }
+  */
 }

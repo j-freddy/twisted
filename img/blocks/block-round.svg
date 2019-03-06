@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="spike.svg">
+   sodipodi:docname="block-round.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="51.570136"
-     inkscape:cy="13.307076"
+     inkscape:zoom="5.6"
+     inkscape:cx="-5.6105611"
+     inkscape:cy="21.675454"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -58,20 +58,9 @@
      id="layer1"
      transform="translate(-186.78571,-306.77441)">
     <path
-       sodipodi:type="star"
-       style="opacity:1;fill:#c8000d;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="path4134"
-       sodipodi:sides="3"
-       sodipodi:cx="218.78571"
-       sodipodi:cy="353.45404"
-       sodipodi:r1="34.640751"
-       sodipodi:r2="17.320375"
-       sodipodi:arg1="-1.5707963"
-       sodipodi:arg2="-0.52359878"
-       inkscape:flatsided="true"
-       inkscape:rounded="0"
-       inkscape:randomized="0"
-       d="m 218.78571,318.81329 29.99977,51.96113 -59.99955,0 z"
-       inkscape:transform-center-y="-8.6601934" />
+       style="opacity:1;fill:#1e1e1e;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 14 0 L 0 14 L 0 50 L 14 64 L 50 64 L 64 50 L 64 14 L 50 0 L 14 0 z "
+       id="path4144"
+       transform="translate(186.78571,306.77441)" />
   </g>
 </svg>

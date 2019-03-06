@@ -4,6 +4,7 @@ Work in progress!
 ## Introduction
 
 ## Instructions
+Press [SHIFT] + [x] to skip a level
 
 ## To-do list
 
@@ -20,6 +21,7 @@ Scripting:
 - SAT framework by jriecken
 
 Graphics:
+- All graphics by me
 
 ## Thank you
 Thanks for viewing this. Feedback is always welcome!

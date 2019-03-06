@@ -135,19 +135,35 @@ class Player extends Tile
 
   checkDeath()
   {
+    const game = this.game;
+
     if(this.isFlipped)
     {
       if(this.y < 0 - this.height)
       {
-        this.die();
+        return true;
       }
     } else
     {
       if(this.y > canvas.height)
       {
-        this.die();
+        return true;
       }
     }
+
+    let death;
+    game.levels.blocks.forEach((block) => {
+      if(block.harmful)
+      {
+        if(this.isCollision(block))
+        {
+          death = true;
+        }
+      }
+    });
+    if(death) return true;
+
+    return false;
   }
 
   die()
@@ -176,15 +192,16 @@ class Player extends Tile
 
   tick()
   {
+    let death;
+
     if(keyList[32] && this.flipCount < this.flipLimit) this.flip();
 
     this.yUpdate();
     this.xUpdate();
-
     this.controlJump();
-    this.checkDeath();
 
-    this.draw();
+    death = this.checkDeath();
+    if(death) this.die();
   }
-
+  
 }

@@ -17,8 +17,11 @@ document.onkeyup = (e) => {
 
 window.onload = () => {
   console.log("Hello world!");
-  console.log("Switch gravity only allowed once in midair");
-  console.log("Push basic physics engine to GitHub");
+  console.log("Press [SHIFT] and [x] simultaneously to skip a level");
+  console.log("Learn how a promise works and attempt to use it for fading");
+  console.log("Beware: if a promise halts all code underneath, return will be delayed, hence tick will continue to run");
+  console.log("Settings in a corner: when hovered over, reveals settings to mute sFx and/or music");
+  console.log("Update hitbox for spike and lava tiles");
 
   const game = new GameController();
   game.init();

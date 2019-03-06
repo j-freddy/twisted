@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="finish.svg">
+   sodipodi:docname="block-l.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8"
-     inkscape:cx="26.281703"
-     inkscape:cy="-6.8959744"
+     inkscape:zoom="5.6"
+     inkscape:cx="-5.6105611"
+     inkscape:cy="21.675454"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -57,13 +57,10 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-186.78571,-306.77441)">
-    <rect
-       style="opacity:1;fill:#26be0d;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect4136"
-       width="64"
-       height="64"
-       x="186.78571"
-       y="306.77441"
-       ry="0" />
+    <path
+       style="opacity:1;fill:#1e1e1e;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 14 0 L 0 14 L 0 50 L 14 64 L 50 64 L 64 64 L 64 50 L 64 14 L 64 0 L 50 0 L 14 0 z "
+       transform="translate(186.78571,306.77441)"
+       id="path4147" />
   </g>
 </svg>

@@ -25,7 +25,13 @@ const _TILEINFO =
   },
   {
     id: "SPIKE",
-    img: [img.spike_t, img.spike_r, img.spike_b, img.spike_l],
+    img: [img.spike_t, img.spike_b],
+    solid: false,
+    harmful: true
+  },
+  {
+    id: "LAVA",
+    img: [img.lava_t, img.lava_b],
     solid: false,
     harmful: true
   }

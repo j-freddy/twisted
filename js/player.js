@@ -5,16 +5,18 @@ class Player extends Tile
     super(0, 0, game.tileWidth * 0.9, game.tileWidth * 0.9, img.player, 1);
     this.game = game;
 
-    this.xAccel = 0.28;
+    this.xAccel = 0.32;
     this.xMinVel = 0.4;
     this.yJump = -7;
     this.wiggleVel = 0.2;
     this.flipLimit = 1;
+    this.fadeSpeed = 0.04;
 
     this.xVel = 0;
     this.yVel = 0;
     this.airTime = 0;
     this.isFlipped = false;
+    this.alive = true;
     this.flipCount = 0;
     this.deathCount = 0;
   }
@@ -166,10 +168,31 @@ class Player extends Tile
     return false;
   }
 
+  checkUniqueBlocks()
+  {
+    const game = this.game;
+
+    game.levels.blocks.forEach((block) => {
+      if(this.isCollision(block))
+      {
+        if(block.id === "FINISH")
+        {
+          game.nextLevel();
+        }
+      }
+    });
+  }
+
   die()
   {
     this.deathCount++;
-    this.init();
+
+    this.alive = false;
+    fade(this, -this.fadeSpeed);
+    wait(() => this.alpha === 0).then(() => {
+      this.init();
+      fade(this, this.fadeSpeed);
+    });
   }
 
   init()
@@ -181,6 +204,7 @@ class Player extends Tile
     this.xVel = 0;
     this.yVel = 0;
     this.airTime = 0;
+    this.alive = true;
     this.flipCount = 0;
     this.deathCount = 0;
 
@@ -200,8 +224,10 @@ class Player extends Tile
     this.xUpdate();
     this.controlJump();
 
+    this.checkUniqueBlocks();
+
     death = this.checkDeath();
     if(death) this.die();
   }
-  
+
 }

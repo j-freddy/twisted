@@ -42,14 +42,23 @@ img.block_round.src = "img/blocks/block-round.svg";
 img.spike_t = new Image();
 img.spike_t.src = "img/blocks/spike-t.svg";
 
-img.spike_r = new Image();
-img.spike_r.src = "img/blocks/spike-r.svg";
-
 img.spike_b = new Image();
 img.spike_b.src = "img/blocks/spike-b.svg";
 
-img.spike_l = new Image();
-img.spike_l.src = "img/blocks/spike-l.svg";
-
 img.finish = new Image();
 img.finish.src = "img/blocks/finish.svg";
+
+img.lava_b = new Image();
+img.lava_b.src = "img/blocks/lava-b.svg";
+
+img.lava_t = new Image();
+img.lava_t.src = "img/blocks/lava-t.svg";
+
+img.info = new Image();
+img.info.src = "img/settings/info.svg";
+
+img.volume = new Image();
+img.volume.src = "img/settings/volume.svg";
+
+img.music = new Image();
+img.music.src = "img/settings/music.svg";

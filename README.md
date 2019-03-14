@@ -20,8 +20,14 @@ Unfortunately, Scratch 3 left the project half-broken, so I decided to program m
 Scripting:
 - SAT framework by jriecken
 
+Music:
+- Cloud Chaser by Felocai
+https://www.newgrounds.com/audio/listen/642484
+- Spot's Canyon by celldamage
+https://www.newgrounds.com/audio/listen/782822
+
 Graphics:
-- All graphics by me
+- Info, music, volume icons from FontAwesome
 
 ## Thank you
 Thanks for viewing this. Feedback is always welcome!

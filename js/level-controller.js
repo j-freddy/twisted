@@ -24,7 +24,8 @@ class LevelController
 
         if(slot >= 1 && slot <= a) this.blocks.push(new Block(x, y, game.tileWidth, this.alpha, "BLOCK", slot-1, this.game));
         if(slot === c) this.blocks.push(new Block(x, y, game.tileWidth, this.alpha, "FINISH", 0, this.game));
-        if(slot >= d && slot <= g) this.blocks.push(new Spike(x, y, game.tileWidth, this.alpha, "SPIKE", slot-d, this.game));
+        if(slot >= d && slot <= e) this.blocks.push(new Spike(x, y, game.tileWidth, this.alpha, "SPIKE", slot-d, this.game));
+        if(slot >= f && slot <= g) this.blocks.push(new Lava(x, y, game.tileWidth, this.alpha, "LAVA", slot-f, this.game));
       });
     });
   }

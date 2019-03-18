@@ -22,6 +22,17 @@ function wait(condition)
   return new Promise(promise);
 }
 
+function waitSeconds(time)
+{
+  const promise = (resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, time*1000);
+  }
+
+  return new Promise(promise);
+}
+
 function fade(target, speed)
 {
   let tick = true;
@@ -99,12 +110,11 @@ window.onload = () => {
       clicked = true;
 
       console.log("Hello world!");
+      console.log("Glitch: if player spawns and [SPACE] is held, player falls out of the world");
       console.log("Press [SHIFT] and [x] simultaneously to skip a level");
       console.log("Music and sFx");
       console.log("Settings in a corner: when hovered over, reveals settings to mute sFx and/or music");
-      console.log("Update hitbox for spike and lava tiles");
       console.log("Stop ticking when game ends");
-      console.log("Add minimalistic clouds");
 
       const game = new GameController();
       cursor.eventHandler();

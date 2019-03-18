@@ -12,6 +12,7 @@ class GameController
 
     this.music = new MusicController();
     this.levels = new LevelController(this);
+    this.background = new Background(this);
     this.settings = new Settings(this);
     this.player = new Player(this);
 
@@ -50,6 +51,7 @@ class GameController
   {
     const levels = this.levels;
     const player = this.player;
+    const background = this.background;
     this.freeze = false;
 
     let endReached;
@@ -62,7 +64,11 @@ class GameController
     } else
     {
       player.init();
-      if(tick) this.tick();
+      if(tick)
+      {
+        background.createCloud();
+        this.tick();
+      }
     }
   }
 
@@ -74,9 +80,11 @@ class GameController
 
     const music = this.music;
     const levels = this.levels;
+    const background = this.background;
     const settings = this.settings;
     const player = this.player;
 
+    this.background.draw();
     this.updateMusic();
 
     if(!this.freeze)

@@ -6,6 +6,9 @@ img.null.src = "img/null.svg";
 img.missing = new Image();
 img.missing.src = "img/blocks/missing.svg";
 
+img.cloud = new Image();
+img.cloud.src = "img/cloud.svg";
+
 img.player = new Image();
 img.player.src = "img/blocks/player.svg";
 

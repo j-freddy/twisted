@@ -6,7 +6,8 @@ const _TILEINFO =
       img.block,
       img.block_tl, img.block_tr, img.block_br, img.block_bl,
       img.block_t, img.block_r, img.block_b, img.block_l,
-      img.block_round
+      img.block_round,
+      img.block_grey
     ],
     solid: true,
     harmful: false
@@ -34,5 +35,11 @@ const _TILEINFO =
     img: [img.lava_t, img.lava_b],
     solid: false,
     harmful: true
+  },
+  {
+    id: "GEM",
+    img: [img.gem],
+    solid: false,
+    harmful: false
   }
 ]

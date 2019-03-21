@@ -104,17 +104,17 @@ const cursor = {
 window.onload = () => {
   let clicked = false;
 
+  console.log("Hello world!");
+  console.log("Glitch: if player spawns and [SPACE] is held, player falls out of the world");
+  console.log("Press [SHIFT] and [x] simultaneously to skip a level");
+  console.log("Music and sFx");
+  console.log("Settings in a corner: when hovered over, reveals settings to mute sFx and/or music");
+  console.log("Stop ticking when game ends");
+
   canvas.onclick = () => {
     if(!clicked)
     {
       clicked = true;
-
-      console.log("Hello world!");
-      console.log("Glitch: if player spawns and [SPACE] is held, player falls out of the world");
-      console.log("Press [SHIFT] and [x] simultaneously to skip a level");
-      console.log("Music and sFx");
-      console.log("Settings in a corner: when hovered over, reveals settings to mute sFx and/or music");
-      console.log("Stop ticking when game ends");
 
       const game = new GameController();
       cursor.eventHandler();

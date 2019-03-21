@@ -114,3 +114,18 @@ class Lava extends Block
   }
 
 }
+
+class Gem extends Block
+{
+  constructor(x, y, width, alpha, id, style, game)
+  {
+    super(x, y, width, alpha, id, style, game);
+  }
+
+  /*
+  get hitbox()
+  {
+
+  }
+  */
+}

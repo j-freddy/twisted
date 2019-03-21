@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="block-bl.svg">
+   sodipodi:docname="gem.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6"
-     inkscape:cx="11.175153"
-     inkscape:cy="21.675454"
+     inkscape:zoom="3.959798"
+     inkscape:cx="-35.089045"
+     inkscape:cy="33.510127"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -58,9 +58,21 @@
      id="layer1"
      transform="translate(-186.78571,-306.77441)">
     <path
-       style="opacity:1;fill:#46321e;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 0 0 L 0 14 L 0 50 L 14 64 L 50 64 L 64 64 L 64 50 L 64 14 L 64 0 L 50 0 L 14 0 L 0 0 z "
-       transform="translate(186.78571,306.77441)"
-       id="path4147" />
+       sodipodi:type="star"
+       style="opacity:1;fill:#00a0b4;fill-opacity:1;stroke:#00006c;stroke-width:0;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path4134"
+       sodipodi:sides="6"
+       sodipodi:cx="218.92857"
+       sodipodi:cy="339.39896"
+       sodipodi:r1="22.080507"
+       sodipodi:r2="11.040254"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-1.0471975"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 218.92857,317.31845 19.12228,11.04025 0,22.08051 -19.12228,11.04025 -19.12228,-11.04025 0,-22.08051 z"
+       inkscape:transform-center-y="-3.7757827"
+       transform="matrix(0.68304441,0,0,0.68400142,69.24777,108.37712)" />
   </g>
 </svg>

@@ -189,9 +189,14 @@ class Player extends Tile
 
     this.alive = false;
     fade(this, -this.fadeSpeed);
+
     wait(() => this.alpha === 0).then(() => {
-      this.init();
       fade(this, this.fadeSpeed);
+      this.init();
+
+      wait(() => this.alpha === 1).then(() => {
+        this.alive = true;
+      });
     });
   }
 
@@ -199,14 +204,15 @@ class Player extends Tile
   {
     const game = this.game;
 
-    this.x = game.tileWidth * 4;
-    this.y = game.tileWidth;
+    let startBlock = game.levels.blocks.find((block) => {
+      return block.id === "START";
+    });
+    this.x = startBlock.x;
+    this.y = startBlock.y;
     this.xVel = 0;
     this.yVel = 0;
     this.airTime = 0;
-    this.alive = true;
     this.flipCount = 0;
-    this.deathCount = 0;
 
     if(game.gravity < 0)
     {

@@ -42,6 +42,9 @@ img.block_l.src = "img/blocks/block-l.svg";
 img.block_round = new Image();
 img.block_round.src = "img/blocks/block-round.svg";
 
+img.block_grey = new Image();
+img.block_grey.src = "img/blocks/block-grey.svg";
+
 img.spike_t = new Image();
 img.spike_t.src = "img/blocks/spike-t.svg";
 
@@ -56,6 +59,9 @@ img.lava_b.src = "img/blocks/lava-b.svg";
 
 img.lava_t = new Image();
 img.lava_t.src = "img/blocks/lava-t.svg";
+
+img.gem = new Image();
+img.gem.src = "img/blocks/gem.svg";
 
 img.info = new Image();
 img.info.src = "img/settings/info.svg";

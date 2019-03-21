@@ -28,7 +28,7 @@ class Background
 
   get cloudSpawnDelay()
   {
-    return Math.random()*2 + 2;
+    return Math.random() + 1;
   }
 
   createCloud()
@@ -36,7 +36,7 @@ class Background
     waitSeconds(this.cloudSpawnDelay).then(() => {
       let width = Math.random()*100 + 50;
       let y = Math.random() * (canvas.height - width);
-      let alpha = Math.random()*40 + 20;
+      let alpha = Math.random()*40 + 30;
       alpha *= 0.01;
 
       this.clouds.push(new Cloud(-width, y, width, alpha, this.game));

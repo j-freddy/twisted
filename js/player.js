@@ -19,6 +19,8 @@ class Player extends Tile
     this.alive = true;
     this.flipCount = 0;
     this.deathCount = 0;
+    this.gemCount = 0;
+    this.currentGemCount = 0;
   }
 
   flip()
@@ -175,8 +177,16 @@ class Player extends Tile
     game.levels.blocks.forEach((block) => {
       if(this.isCollision(block))
       {
+        if(block.id === "GEM")
+        {
+          this.currentGemCount++;
+          block.active = false;
+        }
+
         if(block.id === "FINISH")
         {
+          this.gemCount += this.currentGemCount;
+          this.currentGemCount = 0;
           game.nextLevel();
         }
       }
@@ -203,6 +213,7 @@ class Player extends Tile
   init()
   {
     const game = this.game;
+    game.levels.addBackBlocks();
 
     let startBlock = game.levels.blocks.find((block) => {
       return block.id === "START";
@@ -213,6 +224,7 @@ class Player extends Tile
     this.yVel = 0;
     this.airTime = 0;
     this.flipCount = 0;
+    this.currentGemCount = 0;
 
     if(game.gravity < 0)
     {

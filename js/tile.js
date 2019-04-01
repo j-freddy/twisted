@@ -53,6 +53,7 @@ class Block extends Tile
     this.solid;
     this.harmful;
     this.getProperties();
+    this.active = true;
   }
 
   getProperties()

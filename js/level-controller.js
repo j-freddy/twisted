@@ -8,6 +8,7 @@ class LevelController
     this.alpha = 1;
     this.blocks = [];
     this.enemies = [];
+    this.inactiveBlocks = [];
   }
 
   initBlocks()
@@ -32,10 +33,31 @@ class LevelController
     });
   }
 
+  removeInactiveBlocks()
+  {
+    this.blocks.forEach((block, i) => {
+      if(!block.active)
+      {
+        let inactive = this.blocks.splice(i, 1);
+        this.inactiveBlocks.push(inactive[0]);
+      }
+    });
+  }
+
+  addBackBlocks()
+  {
+    this.inactiveBlocks.forEach((block) => {
+      block.active = true;
+      this.blocks.push(block);
+    });
+    this.inactiveBlocks = [];
+  }
+
   nextLevel()
   {
     const game = this.game;
 
+    this.addBackBlocks();
     let endReached = false;
     if(this.level < game.noLevels)
     {
@@ -50,7 +72,7 @@ class LevelController
 
   tick()
   {
-    //enemies will tick
+    this.removeInactiveBlocks();
   }
 
   draw()

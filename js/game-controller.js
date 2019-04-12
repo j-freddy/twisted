@@ -16,6 +16,7 @@ class GameController
     this.settings = new Settings(this);
     this.player = new Player(this);
 
+    this.end = false;
     this.freeze = false;
   }
 
@@ -47,6 +48,26 @@ class GameController
     music.playMusic();
   }
 
+  displayEndScreen(firstTime = true)
+  {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    if(firstTime)
+    {
+      this.alpha = 0;
+      fade(this, 0.02);
+    }
+
+    ctx.save();
+    ctx.globalAlpha = this.alpha;
+    ctx.drawImage(img.thumbnail, 0, 0, canvas.width, canvas.height);
+    ctx.restore();
+
+    window.requestAnimationFrame(() => {
+      this.displayEndScreen(false);
+    });
+  }
+
   init(tick = true)
   {
     const levels = this.levels;
@@ -54,13 +75,10 @@ class GameController
     const background = this.background;
     this.freeze = false;
 
-    let endReached;
-
-    endReached = levels.nextLevel();
-
-    if(endReached)
+    this.end = levels.nextLevel();
+    if(this.end)
     {
-      console.log("You have reached the end of the game!");
+      this.displayEndScreen();
     } else
     {
       player.init();
@@ -100,6 +118,9 @@ class GameController
 
     cursor.tick();
     music.tick();
+
+    if(this.end) tick = false;
+
     if(tick)
     {
       window.requestAnimationFrame(() => {

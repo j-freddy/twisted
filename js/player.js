@@ -39,6 +39,9 @@ class Player extends Tile
     if(keyList[37]) this.xVel -= this.xAccel;
     if(keyList[39]) this.xVel += this.xAccel;
 
+    if(this.x < 0) this.x = 0;
+    if(this.x > canvas.width - this.width) this.x = canvas.width - this.width;
+
     if(Math.abs(this.xVel) > this.xMinVel)
     {
       this.x += this.xVel;
@@ -79,6 +82,15 @@ class Player extends Tile
 
     this.yVel += game.gravity;
     this.y += this.yVel;
+
+    if(this.isFlipped)
+    {
+      if(this.y > canvas.width - this.height) this.y = canvas.width - this.height;
+    } else
+    {
+      if(this.y < 0) this.y = 0;
+    }
+
     this.yCheckCollision();
   }
 
@@ -241,7 +253,6 @@ class Player extends Tile
     this.yUpdate();
     this.xUpdate();
     this.controlJump();
-
     this.checkUniqueBlocks();
 
     death = this.checkDeath();

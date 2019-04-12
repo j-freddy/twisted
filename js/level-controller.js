@@ -4,7 +4,7 @@ class LevelController
   {
     this.game = game;
 
-    this.level = 0;
+    this.level = _LEVELS.length - 2;
     this.alpha = 1;
     this.blocks = [];
     this.enemies = [];
@@ -59,7 +59,7 @@ class LevelController
 
     this.addBackBlocks();
     let endReached = false;
-    if(this.level < game.noLevels)
+    if(this.level < game.noLevels - 1)
     {
       this.level++;
       this.initBlocks();

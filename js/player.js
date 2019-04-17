@@ -23,6 +23,12 @@ class Player extends Tile
     this.currentGemCount = 0;
   }
 
+  playSound(audio)
+  {
+    audio.volume = this.game.volume;
+    audio.play();
+  }
+
   flip()
   {
     this.isFlipped = !this.isFlipped;
@@ -116,6 +122,11 @@ class Player extends Tile
           {
             this.y -= wiggleVel;
             this.flipCount = 0;
+
+            if(this.airTime > 10)
+            {
+              this.playSound(sfx.land);
+            }
             this.airTime = 0;
           }
 
@@ -137,6 +148,8 @@ class Player extends Tile
           let yJump = this.yJump;
           if(this.isFlipped) yJump *= -1;
           this.yVel = yJump;
+
+          this.playSound(sfx.jump);
         }
       }
     });
@@ -193,6 +206,7 @@ class Player extends Tile
         {
           this.currentGemCount++;
           block.active = false;
+          this.playSound(sfx.gem);
         }
 
         if(block.id === "FINISH")
@@ -208,8 +222,9 @@ class Player extends Tile
   die()
   {
     this.deathCount++;
-
     this.alive = false;
+    this.playSound(sfx.death);
+
     fade(this, -this.fadeSpeed);
 
     wait(() => this.alpha === 0).then(() => {
@@ -248,7 +263,11 @@ class Player extends Tile
   {
     let death;
 
-    if(keyList[32] && this.flipCount < this.flipLimit) this.flip();
+    if(keyList[32] && this.flipCount < this.flipLimit)
+    {
+      this.flip();
+      this.playSound(sfx.swoosh);
+    }
 
     this.yUpdate();
     this.xUpdate();

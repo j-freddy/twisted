@@ -6,6 +6,12 @@ img.null.src = "img/null.svg";
 img.missing = new Image();
 img.missing.src = "img/blocks/missing.svg";
 
+img.intro = new Image();
+img.intro.src = "img/settings/intro.svg";
+
+img.instructions = new Image();
+img.instructions.src = "img/settings/instructions.svg";
+
 img.thumbnail = new Image();
 img.thumbnail.src = "img/thumbnail.svg";
 

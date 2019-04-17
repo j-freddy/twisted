@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8"
-     inkscape:cx="-59.432582"
-     inkscape:cy="-6.8959744"
+     inkscape:zoom="1.4"
+     inkscape:cx="18.44904"
+     inkscape:cy="28.404766"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -58,12 +58,23 @@
      id="layer1"
      transform="translate(-186.78571,-306.77441)">
     <rect
-       style="opacity:1;fill:#261aff;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#3c28ff;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4136"
        width="64"
        height="64"
        x="186.78571"
        y="306.77441"
        ry="0" />
+    <g
+       id="layer1-5"
+       inkscape:label="Layer 1"
+       transform="matrix(0.8,0,0,0.8,17.089117,67.754881)"
+       style="fill:#648cff;fill-opacity:1">
+      <path
+         id="path4144"
+         d="m 234.12074,306.77441 -14,14 0,36 14,14 36,0 14,-14 0,-36 -14,-14 -36,0 z"
+         style="opacity:1;fill:#648cff;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
   </g>
 </svg>

@@ -106,8 +106,8 @@ window.onload = () => {
 
   console.log("Hello world!");
   console.log("Press [SHIFT] and [x] simultaneously to skip a level");
-  console.log("Music and sFx");
-  console.log("Settings in a corner: when hovered over, reveals settings to mute sFx and/or music");
+  console.log("Press [p] to pause");
+  console.log("New blocks");
 
   ctx.drawImage(img.thumbnail, 0, 0, canvas.width, canvas.height);
   canvas.onclick = () => {
@@ -116,8 +116,9 @@ window.onload = () => {
       clicked = true;
 
       const game = new GameController();
+      const intro = new Intro(game);
       cursor.eventHandler();
-      game.init();
+      intro.init();
     }
   }
 }

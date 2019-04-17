@@ -9,13 +9,13 @@ class GameController
 
     this.gravity = 0.25;
     this.friction = 0.88;
-
     this.music = new MusicController();
     this.levels = new LevelController(this);
     this.background = new Background(this);
     this.settings = new Settings(this);
     this.player = new Player(this);
 
+    this.volume = 1;
     this.end = false;
     this.freeze = false;
   }
@@ -46,26 +46,6 @@ class GameController
 
     music.currentMusic = music.playlist.cloud_chaser;
     music.playMusic();
-  }
-
-  displayEndScreen(firstTime = true)
-  {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    if(firstTime)
-    {
-      this.alpha = 0;
-      fade(this, 0.02);
-    }
-
-    ctx.save();
-    ctx.globalAlpha = this.alpha;
-    ctx.drawImage(img.thumbnail, 0, 0, canvas.width, canvas.height);
-    ctx.restore();
-
-    window.requestAnimationFrame(() => {
-      this.displayEndScreen(false);
-    });
   }
 
   init(tick = true)
@@ -112,21 +92,54 @@ class GameController
     }
     levels.draw();
     player.draw();
-    settings.tick();
 
     if(keyList[16] && keyList[88]) this.nextLevel();
+    if(keyList[80])
+    {
+      this.freeze = !this.freeze;
+      keyList[80] = false;
+    }
+
+    if(this.freeze)
+    {
+      ctx.save();
+      ctx.globalAlpha = 0.8;
+      ctx.fillStyle = "#fff";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.restore();
+    }
+    settings.tick();
 
     cursor.tick();
     music.tick();
 
     if(this.end) tick = false;
-
     if(tick)
     {
       window.requestAnimationFrame(() => {
         this.tick();
       });
     }
+  }
+
+  displayEndScreen(firstTime = true)
+  {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    if(firstTime)
+    {
+      this.alpha = 0;
+      fade(this, 0.02);
+    }
+
+    ctx.save();
+    ctx.globalAlpha = this.alpha;
+    ctx.drawImage(img.thumbnail, 0, 0, canvas.width, canvas.height);
+    ctx.restore();
+
+    window.requestAnimationFrame(() => {
+      this.displayEndScreen(false);
+    });
   }
 
 }

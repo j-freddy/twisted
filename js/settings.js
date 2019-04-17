@@ -6,10 +6,15 @@ class Settings extends Tile
     this.volume = new Tile(canvas.width*1/4, canvas.height*0.92, game.tileWidth, game.tileWidth, img.volume, 1, game);
     this.info = new Tile(  canvas.width*2/4, canvas.height*0.92, game.tileWidth, game.tileWidth, img.info, 1, game);
     this.music = new Tile( canvas.width*3/4, canvas.height*0.92, game.tileWidth, game.tileWidth, img.music, 1, game);
+
     this.icons = [];
     this.addicons();
 
     this.volumeSpeed = 0.05;
+    this.disabledAlpha = 0.3;
+
+    this.instructions = new Tile(0, 0, canvas.width, canvas.height, img.instructions, 1, game);
+    this.showInfo = false;
   }
 
   get visible()
@@ -28,6 +33,8 @@ class Settings extends Tile
   {
     const game = this.game;
 
+    if(this.showInfo) this.instructions.draw();
+
     if(this.visible)
     {
       this.icons.forEach((icon) => {
@@ -36,21 +43,30 @@ class Settings extends Tile
 
       if(this.volume.isClicked)
       {
-        console.log("Volume clicked!");
+        game.volume = 1 - game.volume;
+        if(game.volume === 1)
+        {
+          this.volume.alpha = 1
+        } else
+        {
+          this.volume.alpha = this.disabledAlpha;
+        }
       }
       if(this.info.isClicked)
       {
-        console.log("Info clicked!");
-        //pause by setting game.freeze = true;
+        game.freeze = !game.freeze;
+        this.showInfo = !this.showInfo;
       }
       if(this.music.isClicked)
       {
         if(game.music.volume === 0)
         {
           game.music.changeVolume(this.volumeSpeed, 0.9);
+          this.music.alpha = 1;
         } else
         {
           game.music.changeVolume(this.volumeSpeed * -1, 0);
+          this.music.alpha = this.disabledAlpha;
         }
       }
     }

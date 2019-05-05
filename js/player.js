@@ -35,6 +35,7 @@ class Player extends Tile
     this.flipCount++;
     this.game.gravity *= -1;
     keyList[32] = false;
+    this.playSound(sfx.swoosh);
   }
 
   xUpdate()
@@ -206,6 +207,7 @@ class Player extends Tile
         {
           this.currentGemCount++;
           block.active = false;
+          game.gui.updateGemText();
           this.playSound(sfx.gem);
         }
 
@@ -215,6 +217,30 @@ class Player extends Tile
           this.currentGemCount = 0;
           game.nextLevel();
         }
+
+        if(block.id === "KEY") this.unlockBlocks();
+
+        if(block.id === "FLIPUP")
+        {
+          if(!this.isFlipped) this.flip();
+        }
+
+        if(block.id === "FLIPDOWN")
+        {
+          if(this.isFlipped) this.flip();
+        }
+      }
+    });
+  }
+
+  unlockBlocks()
+  {
+    const game = this.game;
+
+    game.levels.blocks.forEach((block) => {
+      if(block.id === "LOCKED")
+      {
+        block.active = false;
       }
     });
   }
@@ -252,6 +278,7 @@ class Player extends Tile
     this.airTime = 0;
     this.flipCount = 0;
     this.currentGemCount = 0;
+    game.gui.updateGemText();
 
     if(game.gravity < 0)
     {
@@ -266,7 +293,6 @@ class Player extends Tile
     if(keyList[32] && this.flipCount < this.flipLimit)
     {
       this.flip();
-      this.playSound(sfx.swoosh);
     }
 
     this.yUpdate();

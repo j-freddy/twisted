@@ -12,7 +12,7 @@ class GameController
     this.music = new MusicController();
     this.levels = new LevelController(this);
     this.background = new Background(this);
-    this.settings = new Settings(this);
+    this.gui = new GUI(this);
     this.player = new Player(this);
 
     this.volume = 1;
@@ -79,7 +79,7 @@ class GameController
     const music = this.music;
     const levels = this.levels;
     const background = this.background;
-    const settings = this.settings;
+    const gui = this.gui;
     const player = this.player;
 
     this.background.draw();
@@ -108,7 +108,7 @@ class GameController
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.restore();
     }
-    settings.tick();
+    gui.tick();
 
     cursor.tick();
     music.tick();

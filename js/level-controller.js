@@ -4,7 +4,7 @@ class LevelController
   {
     this.game = game;
 
-    this.level = 0
+    this.level = 0;
     this.alpha = 1;
     this.blocks = [];
     this.enemies = [];
@@ -25,10 +25,14 @@ class LevelController
 
         if(slot >= 1 && slot <= b) this.blocks.push(new Block(x, y, game.tileWidth, this.alpha, "BLOCK", slot-1, this.game));
         if(slot === c) this.blocks.push(new Block(x, y, game.tileWidth, this.alpha, "START", 0, this.game));
-        if(slot === d) this.blocks.push(new Block(x, y, game.tileWidth, this.alpha, "FINISH", 0, this.game));
+        if(slot === d) this.blocks.push(new Minitile(x, y, game.tileWidth, this.alpha, "FINISH", 0, this.game));
         if(slot >= e && slot <= f) this.blocks.push(new Spike(x, y, game.tileWidth, this.alpha, "SPIKE", slot-e, this.game));
         if(slot >= g && slot <= h) this.blocks.push(new Lava(x, y, game.tileWidth, this.alpha, "LAVA", slot-g, this.game));
-        if(slot === k) this.blocks.push(new Gem(x, y, game.tileWidth, this.alpha, "GEM", 0, this.game));
+        if(slot === k) this.blocks.push(new Minitile(x, y, game.tileWidth, this.alpha, "GEM", 0, this.game));
+        if(slot === l) this.blocks.push(new Block(x, y, game.tileWidth, this.alpha, "FLIPUP", 0, this.game));
+        if(slot === m) this.blocks.push(new Block(x, y, game.tileWidth, this.alpha, "FLIPDOWN", 0, this.game));
+        if(slot === n) this.blocks.push(new Block(x, y, game.tileWidth, this.alpha, "LOCKED", 0, this.game));
+        if(slot === o) this.blocks.push(new Minitile(x, y, game.tileWidth, this.alpha, "KEY", 0, this.game));
       });
     });
   }

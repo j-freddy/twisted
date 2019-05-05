@@ -43,6 +43,42 @@ class Tile
   }
 }
 
+class Writable extends Tile
+{
+  constructor(x, y, width, height, img, alpha, game)
+  {
+    super(x, y, width, height, img, alpha, game);
+    this.text = "default text";
+    this.xOffset = 0;
+    this.yOffset = 0;
+    this.font = "18px Arial";
+    this.colour = "#000";
+  }
+
+  setText(text, xOffset, yOffset, font, colour)
+  {
+    this.text = text;
+    this.xOffset = xOffset;
+    this.yOffset = yOffset;
+    this.font = font;
+    this.colour = colour;
+  }
+
+  draw()
+  {
+    const game = this.game;
+
+    ctx.save();
+    ctx.globalAlpha = this.alpha * game.alpha;
+    ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
+    ctx.font = this.font;
+    ctx.fillStyle = this.colour;
+    ctx.fillText(this.text, this.x+this.xOffset, this.y+this.yOffset);
+
+    ctx.restore();
+  }
+}
+
 class Block extends Tile
 {
   constructor(x, y, width, alpha, id, style, game)
@@ -116,17 +152,22 @@ class Lava extends Block
 
 }
 
-class Gem extends Block
+class Minitile extends Block
 {
   constructor(x, y, width, alpha, id, style, game)
   {
     super(x, y, width, alpha, id, style, game);
+    this.ratio = 40/64;
   }
 
-  /*
   get hitbox()
   {
+    let offset = this.width * (1 - this.ratio)/2;
+    let x = this.x + offset;
+    let y = this.y + offset;
+    let width = this.width - offset*2;
+    let height = this.height - offset*2;
 
+    return new B(new V(x, y), width, height).toPolygon();
   }
-  */
 }

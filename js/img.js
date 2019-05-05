@@ -1,7 +1,7 @@
 const img = {};
 
 img.null = new Image();
-img.null.src = "img/null.svg";
+img.null.src = "img/other/null.svg";
 
 img.missing = new Image();
 img.missing.src = "img/blocks/missing.svg";
@@ -13,10 +13,10 @@ img.instructions = new Image();
 img.instructions.src = "img/settings/instructions.svg";
 
 img.thumbnail = new Image();
-img.thumbnail.src = "img/thumbnail.svg";
+img.thumbnail.src = "img/other/thumbnail.svg";
 
 img.cloud = new Image();
-img.cloud.src = "img/cloud.svg";
+img.cloud.src = "img/other/cloud.svg";
 
 img.player = new Image();
 img.player.src = "img/player/player.svg";
@@ -69,8 +69,17 @@ img.lava_b.src = "img/blocks/lava-b.svg";
 img.lava_t = new Image();
 img.lava_t.src = "img/blocks/lava-t.svg";
 
-img.gem = new Image();
-img.gem.src = "img/blocks/gem.svg";
+img.flip_up = new Image();
+img.flip_up.src = "img/blocks/flip-up.svg";
+
+img.flip_down = new Image();
+img.flip_down.src = "img/blocks/flip-down.svg";
+
+img.locked = new Image();
+img.locked.src = "img/blocks/locked.svg";
+
+img.key = new Image();
+img.key.src = "img/blocks/key.svg";
 
 img.info = new Image();
 img.info.src = "img/settings/info.svg";
@@ -80,3 +89,9 @@ img.volume.src = "img/settings/volume.svg";
 
 img.music = new Image();
 img.music.src = "img/settings/music.svg";
+
+img.gem = new Image();
+img.gem.src = "img/blocks/gem.svg";
+
+img.gem_icon = new Image();
+img.gem_icon.src = "img/other/gem-icon.svg";

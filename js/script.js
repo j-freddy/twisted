@@ -108,6 +108,7 @@ window.onload = () => {
   console.log("Press [SHIFT] and [x] simultaneously to skip a level");
   console.log("Press [p] to pause");
   console.log("New blocks");
+  console.log("Make flip blocks more opaque");
 
   ctx.drawImage(img.thumbnail, 0, 0, canvas.width, canvas.height);
   canvas.onclick = () => {

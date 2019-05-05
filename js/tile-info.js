@@ -41,5 +41,29 @@ const _TILEINFO =
     img: [img.gem],
     solid: false,
     harmful: false
+  },
+  {
+    id: "FLIPUP",
+    img: [img.flip_up],
+    solid: false,
+    harmful: false
+  },
+  {
+    id: "FLIPDOWN",
+    img: [img.flip_down],
+    solid: false,
+    harmful: false
+  },
+  {
+    id: "LOCKED",
+    img: [img.locked],
+    solid: true,
+    harmful: false
+  },
+  {
+    id: "KEY",
+    img: [img.key],
+    solid: false,
+    harmful: false
   }
 ]

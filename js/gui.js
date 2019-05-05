@@ -1,11 +1,12 @@
-class Settings extends Tile
+class GUI extends Tile
 {
   constructor(game)
   {
     super(0, canvas.height*0.9, canvas.width, canvas.height*0.1, img.null, 1, game);
-    this.volume = new Tile(canvas.width*1/4, canvas.height*0.92, game.tileWidth, game.tileWidth, img.volume, 1, game);
-    this.info = new Tile(  canvas.width*2/4, canvas.height*0.92, game.tileWidth, game.tileWidth, img.info, 1, game);
-    this.music = new Tile( canvas.width*3/4, canvas.height*0.92, game.tileWidth, game.tileWidth, img.music, 1, game);
+    this.volume = new Tile(canvas.width*1/4, canvas.height*0.92, game.tileWidth    , game.tileWidth    , img.volume, 1, game);
+    this.info = new Tile(  canvas.width*2/4, canvas.height*0.92, game.tileWidth    , game.tileWidth    , img.info, 1, game);
+    this.music = new Tile( canvas.width*3/4, canvas.height*0.92, game.tileWidth    , game.tileWidth    , img.music, 1, game);
+    this.gems = new Writable(game.tileWidth, game.tileWidth    , game.tileWidth*1.5, game.tileWidth*1.5, img.gem_icon, 1, game);
 
     this.icons = [];
     this.addicons();
@@ -27,6 +28,20 @@ class Settings extends Tile
     this.icons.push(this.volume);
     this.icons.push(this.info);
     this.icons.push(this.music);
+    this.icons.push(this.gems);
+  }
+
+  updateGemText()
+  {
+    const game = this.game;
+
+    this.gems.setText(
+      "= " + (game.player.gemCount + game.player.currentGemCount),
+      this.gems.width,
+      this.gems.height/2,
+      "24px Arial",
+      "#000"
+    );
   }
 
   tick()

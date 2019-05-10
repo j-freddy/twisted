@@ -6,7 +6,7 @@ class GUI extends Tile
     this.volume = new Tile(canvas.width*1/4, canvas.height*0.92, game.tileWidth    , game.tileWidth    , img.volume, 1, game);
     this.info = new Tile(  canvas.width*2/4, canvas.height*0.92, game.tileWidth    , game.tileWidth    , img.info, 1, game);
     this.music = new Tile( canvas.width*3/4, canvas.height*0.92, game.tileWidth    , game.tileWidth    , img.music, 1, game);
-    this.gems = new Writable(game.tileWidth, game.tileWidth    , game.tileWidth*1.5, game.tileWidth*1.5, img.gem_icon, 1, game);
+    this.gems = new Writable(game.tileWidth, game.tileWidth    , game.tileWidth*1.4, game.tileWidth*1.4, img.gem_icon, 1, game);
 
     this.icons = [];
     this.addicons();
@@ -37,10 +37,10 @@ class GUI extends Tile
 
     this.gems.setText(
       "= " + (game.player.gemCount + game.player.currentGemCount),
-      this.gems.width,
-      this.gems.height/2,
+      this.gems.width*1.2,
+      this.gems.height/1.5,
       "24px Arial",
-      "#000"
+      "#00a0b4"
     );
   }
 

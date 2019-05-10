@@ -17,7 +17,7 @@ Work in progress! This version is a **fully functioning game**, though.
 Work in progress!
 
 ## Usage
-Any part of the program is free to use, credit is encouraged
+Any part of the program is free to use, credit is strongly encouraged
 
 ## Thank you
 Thanks for viewing this. Feedback is always welcome!
@@ -41,13 +41,13 @@ Scripting:
 Music:
 - Cloud Chaser by Felocai
     - https://www.newgrounds.com/audio/listen/642484
-- Spot's Canyon by celldamage
+- Spot's Canyon by celldamage (unused)
     - https://www.newgrounds.com/audio/listen/782822
 
 Audio:
 - Swoosh effect
     - http://soundbible.com/682-Swoosh-1.html
-- Jump and land by Juhani Junkala
+- Jump, land, death and gem by Juhani Junkala
     - https://opengameart.org/content/512-sound-effects-8-bit-style
 
 Font:

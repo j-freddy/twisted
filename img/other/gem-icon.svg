@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="146.72191"
-   height="148.27579"
-   viewBox="0 0 146.72191 148.27579"
+   width="153.79289"
+   height="155.42174"
+   viewBox="0 0 153.79289 155.42174"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="50.851082"
-     inkscape:cy="83.316686"
+     inkscape:cx="-19.354576"
+     inkscape:cy="86.889661"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
      showgrid="false"
@@ -59,12 +59,12 @@
      id="layer2"
      inkscape:label="bottom"
      style="display:inline"
-     transform="translate(-530.22051,-455.32393)">
+     transform="translate(-526.68503,-451.75095)">
     <g
-       transform="matrix(2.805862,0,0,2.805862,-10.262518,-457.76918)"
+       transform="matrix(2.9410868,0,0,2.9410868,-39.845916,-505.34747)"
        id="layer1-8"
        inkscape:label="Layer 1"
-       style="fill:#ffffff;fill-opacity:1">
+       style="fill:#00d2e6;fill-opacity:1">
       <path
          transform="matrix(0.68304441,0,0,0.68400142,69.24777,108.37712)"
          inkscape:transform-center-y="-3.7757827"
@@ -80,17 +80,17 @@
          sodipodi:cx="218.92857"
          sodipodi:sides="6"
          id="path4134-3"
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#00006c;stroke-width:0;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="opacity:1;fill:#00d2e6;fill-opacity:1;stroke:#00006c;stroke-width:0;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          sodipodi:type="star" />
     </g>
     <g
        inkscape:label="Layer 1"
        id="g4285"
-       transform="matrix(1.402931,2.4299478,-2.4299478,1.402931,1160.763,-448.15052)"
-       style="fill:#ffffff;fill-opacity:1">
+       transform="matrix(1.4705434,2.5470559,-2.5470559,1.4705434,1187.6156,-495.26525)"
+       style="fill:#00d2e6;fill-opacity:1">
       <path
          sodipodi:type="star"
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#00006c;stroke-width:0;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="opacity:1;fill:#00d2e6;fill-opacity:1;stroke:#00006c;stroke-width:0;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="path4287"
          sodipodi:sides="6"
          sodipodi:cx="218.92857"
@@ -107,10 +107,10 @@
          transform="matrix(0.68304441,0,0,0.68400142,69.24777,108.37712)" />
     </g>
     <g
-       transform="matrix(1.402931,2.4299478,-2.4299478,1.402931,1087.4406,-448.10605)"
+       transform="matrix(1.4705434,2.5470559,-2.5470559,1.4705434,1110.7596,-495.21864)"
        id="g4289"
        inkscape:label="Layer 1"
-       style="fill:#ffffff;fill-opacity:1">
+       style="fill:#00d2e6;fill-opacity:1">
       <path
          transform="matrix(0.68304441,0,0,0.68400142,69.24777,108.37712)"
          inkscape:transform-center-y="-3.7757827"
@@ -126,7 +126,7 @@
          sodipodi:cx="218.92857"
          sodipodi:sides="6"
          id="path4291"
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#00006c;stroke-width:0;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="opacity:1;fill:#00d2e6;fill-opacity:1;stroke:#00006c;stroke-width:0;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          sodipodi:type="star" />
     </g>
   </g>
@@ -134,8 +134,9 @@
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="body"
-     transform="translate(-530.22051,-455.32393)"
-     style="display:inline">
+     transform="translate(-526.68503,-451.75095)"
+     style="display:inline"
+     sodipodi:insensitive="true">
     <g
        style="display:inline;opacity:1;fill:#00a0b4;fill-opacity:1"
        inkscape:label="Layer 1"

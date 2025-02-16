@@ -4,7 +4,7 @@ class LevelController
   {
     this.game = game;
 
-    this.level = 0;
+    this.level = 7;
     this.alpha = 1;
     this.blocks = [];
     this.enemies = [];

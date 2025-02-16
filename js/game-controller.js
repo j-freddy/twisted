@@ -65,15 +65,20 @@ class GameController
       if(tick)
       {
         background.createCloud();
-        this.tick();
+        this.startTick();
       }
     }
   }
 
+  startTick()
+  {
+    this.gameLoop = setInterval(() => {
+      this.tick();
+    }, 1000/60);
+  }
+
   tick()
   {
-    let tick = true;
-
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     const music = this.music;
@@ -113,12 +118,8 @@ class GameController
     cursor.tick();
     music.tick();
 
-    if(this.end) tick = false;
-    if(tick)
-    {
-      window.requestAnimationFrame(() => {
-        this.tick();
-      });
+    if(this.end) {
+      clearInterval(this.gameLoop);
     }
   }
 

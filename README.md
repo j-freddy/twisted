@@ -1,10 +1,11 @@
-# READ ME
-Work in progress!
+# Twisted
 
-## Introduction
-Work in progress! This version is a **fully functioning game**, though.
+Play the game [here][twisted-url]!
+
+[twisted-url]: https://twisted.jtflabs.dev/
 
 ## Instructions
+
 - Use arrow keys to control character – WASD will be supported in a future update
 - Press [SPACE] to switch gravity
 - You can switch gravity only once while midair or on the ground
@@ -13,47 +14,34 @@ Work in progress! This version is a **fully functioning game**, though.
 - Press [p] to pause
 - Hover cursor near the bottom to show settings
 
-## To-do list
-Work in progress!
+## Credits
 
-## Usage
-Any part of the program is free to use, credit is strongly encouraged
+Heavily inspired by [Gravity][gravity-url] by JamesOuO on Scratch.
 
-## Thank you
-Thanks for viewing this. Feedback is always welcome!
+[gravity-url]: https://scratch.mit.edu/projects/31113926/
 
-*SlipAndSlyde*
+### Scripting
 
----
----
+[SAT framework][sat] by jriecken.
 
-## Credit
-Heavily inspired by Gravity by JamesOuO on Scratch:
+[sat]: https://github.com/jriecken/sat-js
 
-https://scratch.mit.edu/projects/31113926/
+### Music
 
-Unfortunately, Scratch 3 left the project half-broken, so I decided to program my own version, this time reborn in JavaScript!
+[Cloud Chaser][music-1] by Felocai.
 
-Scripting:
-- SAT framework by jriecken
-- used some of my (SlipAndSlyde) frameworks
+[music-1]: https://www.newgrounds.com/audio/listen/642484
 
-Music:
-- Cloud Chaser by Felocai
-    - https://www.newgrounds.com/audio/listen/642484
-- Spot's Canyon by celldamage (unused)
-    - https://www.newgrounds.com/audio/listen/782822
+### Audio
 
-Audio:
-- Swoosh effect
-    - http://soundbible.com/682-Swoosh-1.html
-- Jump, land, death and gem by Juhani Junkala
-    - https://opengameart.org/content/512-sound-effects-8-bit-style
+[Swoosh effect][audio-1]
+[Other sound effects][audio-2] by Juhani Junkala.
 
-Font:
-- Moderna by Fontalicious
-    - https://www.dafont.com/moderna.font
+[audio-1]: http://soundbible.com/682-Swoosh-1.html
+[audio-2]: https://opengameart.org/content/512-sound-effects-8-bit-style
 
-Graphics:
-- Info, music, volume icons from FontAwesome
-- Cloud from FontAwesome (temporary)
+### Graphics
+
+Font is [Moderna][moderna] by Fontalicious. Icons from FontAwesome.
+
+[moderna]: https://www.dafont.com/moderna.font

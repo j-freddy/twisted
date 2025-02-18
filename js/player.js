@@ -290,7 +290,7 @@ class Player extends Tile
   {
     let death;
 
-    if(keyList[32] && this.flipCount < this.flipLimit)
+    if(keyList[70] && this.flipCount < this.flipLimit)
     {
       this.flip();
     }

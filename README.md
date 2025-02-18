@@ -6,12 +6,12 @@ Play the game [here][twisted-url]!
 
 ## Instructions
 
-- Use arrow keys to control character – WASD will be supported in a future update
-- Press [SPACE] to switch gravity
-- You can switch gravity only once while midair or on the ground
-- This counter will reset once you land on the ground
-- Press [SHIFT] + [x] to skip a level
-- Press [p] to pause
+- Arrow keys to move
+- **F** to switch gravity
+    - You can switch gravity only once while midair or on the ground
+    - This counter resets once you land
+- **SHIFT + X** to skip a level
+- **P** to pause
 - Hover cursor near the bottom to show settings
 
 ## Credits
@@ -35,6 +35,7 @@ Heavily inspired by [Gravity][gravity-url] by JamesOuO on Scratch.
 ### Audio
 
 [Swoosh effect][audio-1]
+
 [Other sound effects][audio-2] by Juhani Junkala.
 
 [audio-1]: http://soundbible.com/682-Swoosh-1.html
@@ -42,6 +43,6 @@ Heavily inspired by [Gravity][gravity-url] by JamesOuO on Scratch.
 
 ### Graphics
 
-Font is [Moderna][moderna] by Fontalicious. Icons from FontAwesome.
+Font is [Moderna][moderna] by Fontalicious. Cloud icon from FontAwesome.
 
 [moderna]: https://www.dafont.com/moderna.font
